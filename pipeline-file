@@ -1,5 +1,5 @@
 pipeline{
-    node('linux'){
+    agent any
     stages {
     stage('checkout scm'){
         steps{
@@ -13,5 +13,5 @@ pipeline{
         }
 
     }
-}
+
 }
