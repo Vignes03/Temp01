@@ -1,6 +1,9 @@
 pipeline{
     agent any
     stages {
+    stage('checkout scm'){
+        checkout scm
+    }
         stage('submit stack') {
             steps {
                 sh "aws cloudformation create-stack --stack-name MyStack --template-body file://ec2.yaml --region 'us-east-1'"
