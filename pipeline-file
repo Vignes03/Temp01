@@ -8,7 +8,7 @@ pipeline{
 }
         stage('submit stack') {
             steps {
-                bat "aws cloudformation create-stack --stack-name MyStack --template-body file://ec2.yaml --region us-east-1"
+                bat "aws cloudformation create-stack --stack-name MyStack --template-body file://ec2.yaml --region ap-south-1"
             }
         }
 
