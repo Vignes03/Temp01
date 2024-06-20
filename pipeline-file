@@ -3,7 +3,9 @@ pipeline{
     stages {
     stage("Checkout scm")
 {
+    steps{
           checkout scm
+}
 }
         stage('submit stack') {
             steps {
