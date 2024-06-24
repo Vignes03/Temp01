@@ -9,8 +9,9 @@ pipeline{
 }
         stage('submit stack') {
             steps {
-                bat "aws cloudformation create-stack --stack-name Vignesh30 --template-body file://ec2.yaml --region ap-south-1 --on-failure DO_NOTHING --debug"
-            }
+                //bat "aws cloudformation create-stack --stack-name Vignesh30 --template-body file://ec2.yaml --region ap-south-1 --on-failure DO_NOTHING --debug"
+             bat "aws cloudformation describe-stacks --stack-name Vignesh30"
+}
         }
 
     }
