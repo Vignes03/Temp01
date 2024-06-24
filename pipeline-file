@@ -9,7 +9,7 @@ pipeline{
 }
         stage('submit stack') {
             steps {
-                bat "aws cloudformation create-stack --stack-name Vignesh26 --disable-rollback true --debug"
+                bat "aws cloudformation create-stack --stack-name Vignesh26 --disable-rollback --on-failure DO_NOTHING --debug"
             }
         }
 
